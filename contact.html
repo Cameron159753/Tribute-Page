@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+    <!-- BOX ICONS CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="script.js"></script> -->
+    <title>Document</title>
+</head>
+<div class="side-navbar active-nav d-flex justify-content-between flex-wrap flex-column" id="sidebar">
+    <ul class="nav flex-column text-white w-100">
+      <a href="#" class="nav-link h3 text-white my-2">
+        Cameron </br>Bowers
+      </a>
+      <a href="index.html" class="nav-link">
+        <i class="bx bxs-dashboard"></i>
+        <span class="mx-2">Home</span>
+      </li>
+      <a href="about.html" class="nav-link">
+        <i class="bx bx-user-check"></i>
+        <span class="mx-2">About</span>
+      </li>
+      <a href="education.html" class="nav-link">
+        <i class="bx bx-conversation"></i>
+        <span class="mx-2">Education</span>
+      </li>
+    <a href="project.html" class="nav-link">
+      <i class="bx bx-conversation"></i>
+      <span class="mx-2">Projects</span>
+    </li>
+  <a href="testimonial.html" class="nav-link">
+    <i class="bx bx-conversation"></i>
+    <span class="mx-2">Testimonial</span>
+  </li>
+  <a href="contact.html" class="nav-link">
+    <i class="bx bx-conversation"></i>
+    <span class="mx-2">Contact</span>
+  </li>
+</ul>
+
+    <span href="#" class="nav-link h4 w-100 mb-5">
+      <a href=""><i class="bx bxl-instagram-alt text-white"></i></a>
+      <a href=""><i class="bx bxl-twitter px-2 text-white"></i></a>
+      <a href=""><i class="bx bxl-facebook text-white"></i></a>
+    </span>
+  </div>
+
+  <!-- Main Wrapper -->
+  <div class="p-1 my-container active-cont">
+    <!-- Top Nav -->
+    <nav class="navbar top-navbar navbar-light bg-light px-5">
+      <a class="btn border-0" id="menu-btn"><i class="bx bx-menu"></i></a>
+    </nav>
+    <!--End Top Nav -->
+   
+  </div>
+<body>
+  
+
+    <section id="contact">
+  
+        <div class="about">
+            <h1>Contact</h1>
+            
+               <div class="shado"> Contact</div>
+            
+            </div>
+        
+        <div class="contact-wrapper">
+        
+        <!-- Left contact page --> 
+          
+          <form id="contact-form" class="form-horizontal" role="form">
+             
+            <div class="form-group">
+              <div class="col-sm-12">
+                <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+              </div>
+            </div>
+      
+            <div class="form-group">
+              <div class="col-sm-12">
+                <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+              </div>
+            </div>
+      
+            <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+            
+            <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+              <div class="alt-send-button">
+                <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+              </div>
+            
+            </button>
+            
+          </form>
+          
+        <!-- Left contact page --> 
+          
+            <div class="direct-contact-container">
+      
+              <ul class="contact-list">
+                <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">City, State</span></i></li>
+                
+                <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></i></li>
+                
+                <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">hitmeup@gmail.com</a></span></i></li>
+                
+              </ul>
+      
+              <hr>
+              <ul class="social-media-list">
+                <li><a href="#" target="_blank" class="contact-icon">
+                  <i class="fa fa-github" aria-hidden="true"></i></a>
+                </li>
+                <li><a href="#" target="_blank" class="contact-icon">
+                  <i class="fa fa-codepen" aria-hidden="true"></i></a>
+                </li>
+                <li><a href="#" target="_blank" class="contact-icon">
+                  <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                </li>
+                <li><a href="#" target="_blank" class="contact-icon">
+                  <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </li>       
+              </ul>
+              <hr>
+      
+              <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+      
+            </div>
+          
+        </div>
+        
+      </section>  
+      <script>
+          document.querySelector('#contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    e.target.elements.name.value = '';
+    e.target.elements.email.value = '';
+    e.target.elements.message.value = '';
+  });
+      </script>
+
+    <script>
+        var menu_btn = document.querySelector("#menu-btn");
+var sidebar = document.querySelector("#sidebar");
+var container = document.querySelector(".my-container");
+menu_btn.addEventListener("click", () => {
+  sidebar.classList.toggle("active-nav");
+  container.classList.toggle("active-cont");
+});
+
+    </script>
+
+      <!-- bootstrap js -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+   
+</body>
+</html>
